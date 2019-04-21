@@ -4,7 +4,7 @@
 
 |   ☕️          | 📱 | 💻 | 💾 | 📟 | 📊 | 📕 |
 | :-------: | :----: | :----: | :----: | :----: | :----: | :----: | 
-| <a href="#Java">Java</a> | <a href="#Android">Android</a> | <a href="#UI">UI</a> | <a href="#DataBase">DataBase</a> | <a href="#Linux">Linux</a> | <a href="#算法和数据结构">算法和数据结构</a> | <a href="#books-读书笔记">读书笔记</a> | 
+| <a href="#☕️ Java">Java</a> | <a href="#📱 Android">Android</a> | <a href="#UI">UI</a> | <a href="#DataBase">DataBase</a> | <a href="#Linux">Linux</a> | <a href="#算法和数据结构">算法和数据结构</a> | <a href="#books-读书笔记">读书笔记</a> | 
 
 ---
 
@@ -42,7 +42,7 @@
 
 ## :books: 读书笔记
 
-1. [《Java8实战》读书笔记](https://github.com/qshomewy/JavaNotes/blob//master/notes/《Java8实战》读书笔记.md)
+1. [《Java8实战》读书笔记](notes/《Java8实战》读书笔记.md)
 2. [《Kafka权威指南》读书笔记](https://github.com/qshomewy/JavaNotes/blob/master/notes/《Kafka权威指南》读书笔记.md) 
 3. [《RabbitMQ实战指南》读书笔记](https://github.com/qshomewy/JavaNotes/blob/master/notes/《RabbitMQ实战指南》读书笔记.md) 
 4. [《深入理解ES6》读书笔记](https://github.com/qshomewy/JavaNotes/blob/master/notes/《深入理解ES6》读书笔记.md)
