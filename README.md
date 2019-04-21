@@ -1,10 +1,10 @@
-##  :tea:    编程笔记
+## 编程笔记
 
 > 学习、总结、记录 ! —— since 2018/20
 
-| ☕️    | 💻    | 💾      | 📟        | :globe_with_meridians: | 🌳    | 🚀 | 📊  | :cd: | :books: |
+| ☕️ | 💻 | 💾 | 📟 | :globe_with_meridians: | 🌳 | 🚀 | 📊  | :cd: | :books: |
 | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
-| <a href="#coffee-java">Java</a> | <a href="#-前端">前端</a> | <a href="#-数据库">数据库</a> | <a href="#-操作系统">操作系统</a> | <a href="#-网络通信">网络通信</a>               | <a href="#-Spring">Spring</a> | <a href="#-分布式">分布式</a> | <a href="#-算法和数据结构">算法和数据结构</a> | <a href="#cd-大数据">大数据</a> | <a href="#books-读书笔记">读书笔记</a> |
+| <a href="#coffee-java">Java</a> | <a href="#-前端">前端</a> | <a href="#-数据库">数据库</a> | <a href="#-操作系统">操作系统</a> | <a href="#-网络通信">网络通信</a> | <a href="#-Spring">Spring</a> | <a href="#-分布式">分布式</a> | <a href="#-算法和数据结构">算法和数据结构</a> | <a href="#cd-大数据">大数据</a> | <a href="#books-读书笔记">读书笔记</a> |
 
  
 
