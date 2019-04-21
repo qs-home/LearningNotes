@@ -6,7 +6,7 @@
 | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
 | [Java](#Java) | [Android](#Android) | <a href="#-前端">前端</a> | <a href="#-数据库">数据库</a> | <a href="#-操作系统">操作系统</a> | <a href="#-网络通信">网络通信</a> | <a href="#-Spring">Spring</a> | <a href="#-分布式">分布式</a> | <a href="#-算法和数据结构">算法和数据结构</a> | <a href="#cd-大数据">大数据</a> | <a href="#books-读书笔记">读书笔记</a> |
 
-> <h2 id="Java">☕️ Java</h2>:globe_with_meridians:
+> <h2 id="Java">☕️ Java</h2>
 
 1. Java设计模式
 
