@@ -8,18 +8,19 @@
 
 <h4 id="Java">☕️ Java</h4>
 
-+ 1. Java设计模式
-- 2. Java数据结构
-- 3. 深入理解Java虚拟机
-- 4. 并发编程框架disruptor
-- 5. Java网络编程
-- 6. tomcat 调优
+- Java设计模式
+- Java数据结构
+- 深入理解Java虚拟机
+- 并发编程框架disruptor
+- Java网络编程
+- tomcat 调优
 
 <h4 id="Android">📱 Android</h4>
 
 <h4 id="前端">💻 前端</h4>
 
 <h4 id="数据库">💾 数据库</h4>
+
 ###### 1. Oracle
 
 ###### 2. MySQL
@@ -55,6 +56,7 @@ linux 核心概念、常用命令
 - 2. 高性能NIO框架Netty
 
 <h4 id="算法和数据结构">📊 算法和数据结构</h4>
+
 ###### 1. 数据结构
 
 数组、栈、队列、链表、二分搜索树、集合、映射、优先队列、堆、线段树、Trie、并查集、AVL、红黑树、哈希表
