@@ -27,8 +27,8 @@
 > <h4 id="Java">☕️ Java</h4>
 
 - [Java基础](#notes/Java/Java基础.md)
-- [Java集合框架](#notes/Java/Java数据结构.md)
-- [Java并发编程](#notes/Java/Java并发编程.md)
+- [Java集合](#notes/Java/Java集合.md)
+- [Java并发](#notes/Java/Java并发.md)
 - [JavaI/O](#notes/Java/JavaI/O.md)
 - [Java虚拟机](#notes/Java/Java虚拟机.md)
 - [Java设计模式](#notes/Java/Java设计模式.md)
