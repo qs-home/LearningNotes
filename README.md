@@ -9,6 +9,9 @@
 
 <h4 id="Java">☕️ Java</h4>
 
+#### Java
+
+
 - Java设计模式
 - Java数据结构
 - 深入理解Java虚拟机
@@ -16,7 +19,9 @@
 - Java网络编程
 - tomcat 调优
 
-<h4 id="Android">📱 Android</h4> ---
+<h4 id="Android">📱 Android</h4> 
+
+---
 
 <h4 id="前端">💻 前端</h4>
 
