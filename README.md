@@ -8,7 +8,7 @@
 
 <h4 id="Java">☕️ Java</h4>
 
-- 1. Java设计模式
++ 1. Java设计模式
 - 2. Java数据结构
 - 3. 深入理解Java虚拟机
 - 4. 并发编程框架disruptor
