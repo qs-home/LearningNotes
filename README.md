@@ -10,33 +10,30 @@
 
 > <h4 id="算法和数据结构">📊 算法和数据结构</h4>
 
-###### [算法](notes/算法和数据结构/算法.md)
+- [算法](notes/算法和数据结构/算法.md)
 
   排序算法、动态规划、递归、回溯法、贪心算法等
 
 - [数据结构](notes/算法和数据结构/数据结构.md)
 
+  数组、栈、队列、链表、二分搜索树、集合、映射、优先队列、堆、线段树、Trie、并查集、AVL、红黑树、哈希表
+
 - [海量数据处理](notes/算法和数据结构/海量数据处理.md)
 
   数据处理典型案例，逐渐更新
-
-
-###### 1. 数据结构
-
-数组、栈、队列、链表、二分搜索树、集合、映射、优先队列、堆、线段树、Trie、并查集、AVL、红黑树、哈希表
-
-###### 2. 算法
-
+  
 ---
 
 > <h4 id="Java">☕️ Java</h4>
 
-- Java设计模式
-- Java数据结构
-- 深入理解Java虚拟机
-- 并发编程框架disruptor
-- Java网络编程
-- tomcat 调优
+- [Java基础](#notes/Java/Java基础.md)
+- [Java集合框架](#notes/Java/Java数据结构.md)
+- [Java并发编程](#notes/Java/Java并发编程.md)
+- [JavaI/O](#notes/Java/JavaI/O.md)
+- [Java虚拟机](#notes/Java/Java虚拟机.md)
+- [Java设计模式](#notes/Java/Java设计模式.md)
+- [JavaWeb](#notes/Java/JavaWeb.md)
+
 ---
 
 > <h4 id="Android">📱 Android</h4> 
