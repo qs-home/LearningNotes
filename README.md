@@ -7,10 +7,7 @@
 | [Java](#Java) | [Android](#Android) | [前端](#前端) | [数据库](#数据库) | [操作系统](#操作系统) | [网络通信](#网络通信) | [算法和数据结构](#算法和数据结构) | [大数据](#大数据) | [读书笔记](#读书笔记) | 
 ---
 
-##### ☕️ Java
-##### 前端
-
-><h4 id="Java"></h4>
+> <h4 id="Java">☕️ Java</h4>
 
 - Java设计模式
 - Java数据结构
@@ -18,14 +15,13 @@
 - 并发编程框架disruptor
 - Java网络编程
 - tomcat 调优
-
-<h4 id="Android">📱 Android</h4> 
-
 ---
 
-<h4 id="前端">💻 前端</h4>
+> <h4 id="Android">📱 Android</h4> 
 
-<h4 id="数据库">💾 数据库</h4>
+> <h4 id="前端">💻 前端</h4>
+
+> <h4 id="数据库">💾 数据库</h4>
 
 ###### 1. Oracle
 
@@ -53,7 +49,7 @@
 + MongoDB 聚合、索引及基本执行命令
 + MongoDB数据分片、转存及恢复策略
 
-<h4 id="操作系统">📟 操作系统</h4>
+> <h4 id="操作系统">📟 操作系统</h4>
 linux 核心概念、常用命令
 
 <h4 id="网络通信">🌐 网络通信</h4>
@@ -61,7 +57,7 @@ linux 核心概念、常用命令
 - 1. IO 基本概念、NIO、AIO、BIO 深入分析
 - 2. 高性能NIO框架Netty
 
-<h4 id="算法和数据结构">📊 算法和数据结构</h4>
+> <h4 id="算法和数据结构">📊 算法和数据结构</h4>
 
 ###### 1. 数据结构
 
@@ -69,9 +65,9 @@ linux 核心概念、常用命令
 
 ###### 2. 算法
 
-<h4 id="大数据">🗄 大数据</h4>
+> <h4 id="大数据">🗄 大数据</h4>
 
-<h4 id="读书笔记">📚 读书笔记</h4>
+> <h4 id="读书笔记">📚 读书笔记</h4>
 
 1. [《Java8实战》读书笔记](https://github.com/heibaiying/LearningNotes/tree/master/notes/《Java8实战》读书笔记.md)
 2. [《Kafka权威指南》读书笔记](https://github.com/heibaiying/LearningNotes/tree/master/notes/《Kafka权威指南》读书笔记.md) 
