@@ -11,6 +11,8 @@
 - [关键字](#关键字)
 	- [final](#final)
 	- [static（静态）](#static静态)
+	- [break、continue、return](#breakcontinuereturn)
+	- [final、finally、finalize](#finalfinallyfinalize)
 	- [extends（继承）](#extends继承)
 	- [abstract（抽象）](#[abstract抽象)
 - [匿名对象](#匿名对象)
@@ -186,6 +188,41 @@ p.eat();
 - 成员方法：工具方法。
 ---
 
+## break、continue、return
+> ### break
+- 跳出当前循环；但是如果是嵌套循环，则只能跳出当前的这一层循环，只有逐层 break 才能跳出所有循环。
+```
+for (int i = 0; i < 10; i++) {
+    // 在执行i==6时强制终止循环，i==6不会被执行 
+    if (i == 6)
+        break;
+    System.out.println(i);  
+}  
+```
+```
+输出结果为0 1 2 3 4 5 ；6以后的都不会输出
+```
+> ### continue
+- 终止当前循环，但是不跳出循环（在循环中 continue 后面的语句是不会执行了），继续往下根据循环条件执行循环。
+```
+for (int i = 0; i < 10; i++) {  
+    // i==6不会被执行，而是被中断了    
+    if(i == 6) 
+        continue;   
+    System.out.println(i);  
+}
+```
+```
+输出结果为0 1 2 3 4 5 7 8 9； 只有6没有输出
+```
+> ### return
+- return 从当前的方法中退出，返回到该调用的方法的语句处，继续执行。
+- return 返回一个值给调用该方法的语句，返回值的数据类型必须与方法的声明中的返回值的类型一致。
+- return 后面也可以不带参数，不带参数就是返回空，其实主要目的就是用于想中断函数执行，返回调用函数处。
+特别注意：返回值为 void 的方法，从某个判断中跳出，必须用 return。
+
+## final、finally和finalize区别
+---
 ## extends（继承）
 > ### extends概念
 - 类和类的一种关系，在父类中定义的非私有成员可以在子类中直接使用。
