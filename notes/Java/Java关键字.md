@@ -1,6 +1,6 @@
 | 关键字 |||||  
 | :---: | :---: | :---: | :---: | :---: | 
-| [abstract](#abstract) | assert | boolean | [break](#break) | byte |
+| [abstract](#abstract) | [assert](#assert断言) | boolean | [break](#break) | byte |
 | case | catch | char | class | const |
 | [continue](#continue) | default | do | double | else |
 | enum | [extends]（#extends） | [final](#final) | [finally](#finally) | float |
@@ -13,8 +13,76 @@
 
 ## abstract
 ## assert
+- 断言（assert）作为一种软件调试的方法，提供了一种在代码中进行正确性检查的机制，目前很多开发语言都支持这种机制。
+- 在实现中，assertion 就是在程序中的一条语句，它对一个 boolean 表达式进行检查，一个正确程序必须保证这个 boolean 表达式的值为 true；如果该值为 false，说明程序已经处于不正确的状态下，系统将给出警告并且退出。一般来说，assertion 用于保证程序最基本、关键的正确性。**assertion 检查通常在开发和测试时开启**。为了提高性能，**在软件发布后，assertion 检查通常是关闭的**。下面简单介绍一下 Java 中 assertion 的实现。
+- 在语法上，为了支持 assertion，Java 增加了一个关键字 assert。它包括两种表达式，分别如下：
+
+　　**assert <boolean表达式>**
+
+　　如果 <boolean表达式> 为 true，则程序继续执行。
+
+　　如果为 false，则程序抛出 AssertionError，并终止执行。
+
+ 
+
+　　**assert <boolean表达式> : <错误信息表达式>**
+
+　　如果 <boolean表达式> 为 true，则程序继续执行。
+
+　　如果为 false，则程序抛出 java.lang.AssertionError，并输入<错误信息表达式>。
+
+```java
+public static void main(String[] args) {
+    System.out.println("123");
+
+    int a = 0;
+    int b = 1;
+    assert a == b; //需显示开启，默认为不开启状态 
+    assert a == b : "执行失败！";
+
+    System.out.println("1234");
+}
+```
+assert 的应用范围很多，主要包括：
+- 检查控制流
+- 检查输入参数是否有效
+- 检查函数结果是否有效
+- 检查程序不变
+
+### 什么是断言
+
+> 断言是编程术语，表示为一些布尔表达式，程序员相信在程序中的某个特定点该表达式值为真，可以在任何时候启用和禁用断言验证，因此可以在测试时启用断言而在部署时禁用断言。同样，程序投入运行后，最终用户在遇到问题时可以重新启用断言。
+
+使用断言可以创建更稳定、品质更好且 不易于出错的代码。当需要在一个值为 `false` 时中断当前操作的话，可以使用断言。单元测试必须使用断言（Junit/JunitX）。
+
+### 常用断言方法
+
+| 断言                                                         | 描述                                                         |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| void assertEquals([String message], expected value, actual value) | 断言两个值相等。值可能是类型有 int, short, long, byte, char or java.lang.Object. 第一个参数是一个可选的字符串消息 |
+| void assertTrue([String message], boolean condition)         | 断言一个条件为真                                             |
+| void assertFalse([String message],boolean condition)         | 断言一个条件为假                                             |
+| void assertNotNull([String message], java.lang.Object object) | 断言一个对象不为空(null)                                     |
+| void assertNull([String message], java.lang.Object object)   | 断言一个对象为空(null)                                       |
+| void assertSame([String message], java.lang.Object expected, java.lang.Object actual) | 断言，两个对象引用相同的对象                                 |
+| void assertNotSame([String message], java.lang.Object unexpected, java.lang.Object actual) | 断言，两个对象不是引用同一个对象                             |
+| void assertArrayEquals([String message], expectedArray, resultArray) | 断言预期数组和结果数组相等。数组的类型可能是 int, long, short, char, byte or java.lang.Object. |
+
+---
 ## boolean
 ## break
+- 跳出当前循环；但是如果是嵌套循环，则只能跳出当前的这一层循环，只有逐层 break 才能跳出所有循环。
+```
+for (int i = 0; i < 10; i++) {
+    // 在执行i==6时强制终止循环，i==6不会被执行 
+    if (i == 6)
+        break;
+    System.out.println(i);  
+}  
+```
+```
+输出结果为0 1 2 3 4 5 ；6以后的都不会输出
+```
 ## byte
 
 ## case 
@@ -24,6 +92,18 @@
 ## const
 
 ## continue 
+- 终止当前循环，但是不跳出循环（在循环中 continue 后面的语句是不会执行了），继续往下根据循环条件执行循环。
+```
+for (int i = 0; i < 10; i++) {  
+    // i==6不会被执行，而是被中断了    
+    if(i == 6) 
+        continue;   
+    System.out.println(i);  
+}
+```
+```
+输出结果为0 1 2 3 4 5 7 8 9； 只有6没有输出
+```
 ## default 
 ## do 
 ## double	 
@@ -65,6 +145,14 @@ public Dog() {
 - 声明类不允许被继承。
 ---
 ## finally 
+- 在异常处理的时候，提供 finally 块来执行任何的清除操作。如果抛出一个异常，那么相匹配的 catch 字句就会执行，然后控制就会进入 finally 块，前提是有 finally 块。例如：数据库连接关闭操作上
+- finally 作为异常处理的一部分，它只能用在 try/catch 语句中，并且附带一个语句块，表示这段语句最终一定会被执行（不管有没有抛出异常），经常被用在需要释放资源的情况下。（×）（**这句话其实存在一定的问题，还没有深入了解，欢迎大家在 issue 中提出自己的见解）** 
+- 异常情况说明：
+ - 在执行 try 语句块之前已经返回或抛出异常，所以 try 对应的 finally 语句并没有执行。 
+ - 我们在 try 语句块中执行了 System.exit (0) 语句，终止了 Java 虚拟机的运行。那有人说了，在一般的 Java 应用中基本上是不会调用这个 System.exit(0) 方法的 
+  - 当一个线程在执行 try 语句块或者 catch 语句块时被打断（interrupted）或者被终止（killed），与其相对应的 finally 语句块可能不会执行 
+  - 还有更极端的情况，就是在线程运行 try 语句块或者 catch 语句块时，突然死机或者断电，finally 语句块肯定不会执行了。可能有人认为死机、断电这些理由有些强词夺理，没有关系，我们只是为了说明这个问题。 
+---
 ## float
 
 ## for	
@@ -73,11 +161,40 @@ public Dog() {
 ## implements 
 ## import 
 
-## instanceof 
+## instanceof
+instanceof 是 Java 的一个二元操作符，类似于 ==，>，< 等操作符。
+
+instanceof 是 Java 的保留关键字。它的作用是测试它左边的对象是否是它右边的类的实例，返回 boolean 的数据类型。
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        Object testObject = new ArrayList();
+        displayObjectClass(testObject);
+    }
+    public static void displayObjectClass(Object o) {
+        if (o instanceof Vector)
+            System.out.println("对象是 java.util.Vector 类的实例");
+        else if (o instanceof ArrayList)
+            System.out.println("对象是 java.util.ArrayList 类的实例");
+        else
+            System.out.println("对象是 " + o.getClass() + " 类的实例");
+    }
+}
+```
 ## int 
 ## interface 
 ## long 
-## native 
+## native
+native（即 JNI，Java Native Interface），凡是一种语言，都希望是纯。比如解决某一个方案都喜欢就单单这个语言来写即可。Java 平台有个用户和本地 C 代码进行互操作的 API，称为 Java Native Interface (Java本地接口)。 
+
+<div align="center"> <img src="assets/java-native-interface.png" width="500"/></div><br/>
+
+
+
+参考资料：
+
+- [java中native的用法 - 不止吧 - 博客园](https://www.cnblogs.com/b3051/p/7484501.html)
 
 ## new	
 ## package 
@@ -85,8 +202,17 @@ public Dog() {
 ## protected 
 ## public 
 
-## return	
-## strictfp	
+## return
+- return 从当前的方法中退出，返回到该调用的方法的语句处，继续执行。
+- return 返回一个值给调用该方法的语句，返回值的数据类型必须与方法的声明中的返回值的类型一致。
+- return 后面也可以不带参数，不带参数就是返回空，其实主要目的就是用于想中断函数执行，返回调用函数处。
+特别注意：返回值为 void 的方法，从某个判断中跳出，必须用 return。
+## strictfp
+strictfp，即 **strict float point** (精确浮点)。 
+
+strictfp 关键字可应用于类、接口或方法。使用 strictfp 关键字声明一个方法时，该方法中所有的 float 和 double 表达式都严格遵守 FP-strict 的限制,符合 IEEE-754 规范。当对一个类或接口使用 strictfp 关键字时，该类中的所有代码，包括嵌套类型中的初始设定值和代码，都将严格地进行计算。严格约束意味着所有表达式的结果都必须是 IEEE 754 算法对操作数预期的结果，以单精度和双精度格式表示。
+
+如果你想让你的浮点运算更加精确，而且不会因为不同的硬件平台所执行的结果不一致的话，可以用关键字strictfp.
 ## short	
 ## static	
 ## static
@@ -179,9 +305,35 @@ p.eat();
 ## throws
 
 ## transient
+> transient 英 /'trænzɪənt/   adj. 短暂的；路过的  n. 瞬变现象；过往旅客；候鸟
+
+我们都知道一个对象只要实现了 Serilizable 接口，这个对象就可以被序列化，Java 的这种序列化模式为开发者提供了很多便利，我们可以不必关系具体序列化的过程，只要这个类实现了 Serilizable 接口，这个类的所有属性和方法都会自动序列化。
+
+然而在实际开发过程中，我们常常会遇到这样的问题，这个类的有些属性需要序列化，而其他属性不需要被序列化，打个比方，如果一个用户有一些敏感信息（如密码，银行卡号等），为了安全起见，不希望在网络操作（主要涉及到序列化操作，本地序列化缓存也适用）中被传输，这些信息对应的变量就可以加上 transient 关键字。换句话说，这个字段的生命周期仅存于调用者的内存中而不会写到磁盘里持久化。
+
+**总之，Java 的 transient 关键字为我们提供了便利，你只需要实现 Serilizable 接口，将不需要序列化的属性前添加关键字transient，序列化对象的时候，这个属性就不会序列化到指定的目的地中。**
+
+
+
+参考资料：
+
+- [Java transient关键字使用小记 - Alexia(minmin) - 博客园](https://www.cnblogs.com/lanxuezaipiao/p/3369962.html)
+
 ## try
 ## void 
-## volatile 
+## volatile
+> 每次都读错，美式发音：volatile /'vɑlətl/ adj. [化学] 挥发性的；不稳定的；爆炸性的；反复无常的 
+
+　　volatile 是一个**类型修饰符**（type specifier），它是被设计用来修饰被不同线程访问和修改的变量。在使用 volatile 修饰成员变量后，所有线程在任何时间所看到变量的值都是相同的。此外，使用 volatile 会组织编译器对代码的优化，因此会降低程序的执行效率。所以，除非迫不得已，否则，能不使用 volatile 就尽量不要使用 volatile。
+
+- 每次访问变量时，总是获取主内存的最新值
+- 每次修改变量后，立刻写回到主内存中
+
+ <div align="center"> <img src="assets/java-volatile.png" width="400"/></div>
+
+参考资料：
+
+- [理解java Volatile 关键字 - 个人文章 - SegmentFault 思否](https://segmentfault.com/a/1190000015087945)
 ## while
 
 
