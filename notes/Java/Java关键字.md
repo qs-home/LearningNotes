@@ -1,6 +1,6 @@
 | 关键字 |||||  
 | :---: | :---: | :---: | :---: | :---: | 
-| [abstract](#abstract) | [assert](#assert断言) | boolean | [break](#break) | byte |
+| [abstract抽象](#abstract抽象) | [assert断言](#assert断言) | boolean | [break](#break) | byte |
 | case | catch | char | class | const |
 | [continue](#continue) | default | do | double | else |
 | enum | [extends]（#extends） | [final](#final) | [finally](#finally) | float |
@@ -11,30 +11,22 @@
 | switch | synchronized |	this |	throw |	throws |
 | transient |	try |	void | volatile |	while |
 
-## abstract
-## assert
+## abstract（抽象）
+## assert（断言）
 - 断言（assert）作为一种软件调试的方法，提供了一种在代码中进行正确性检查的机制，目前很多开发语言都支持这种机制。
 - 在实现中，assertion 就是在程序中的一条语句，它对一个 boolean 表达式进行检查，一个正确程序必须保证这个 boolean 表达式的值为 true；如果该值为 false，说明程序已经处于不正确的状态下，系统将给出警告并且退出。一般来说，assertion 用于保证程序最基本、关键的正确性。**assertion 检查通常在开发和测试时开启**。为了提高性能，**在软件发布后，assertion 检查通常是关闭的**。下面简单介绍一下 Java 中 assertion 的实现。
 - 在语法上，为了支持 assertion，Java 增加了一个关键字 assert。它包括两种表达式，分别如下：
-
-　　**assert <boolean表达式>**
-
+ - **assert <boolean表达式>**
+	如果 <boolean表达式> 为 true，则程序继续执行。
+	如果为 false，则程序抛出 AssertionError，并终止执行。 
+ - **assert <boolean表达式> : <错误信息表达式>**
 　　如果 <boolean表达式> 为 true，则程序继续执行。
-
-　　如果为 false，则程序抛出 AssertionError，并终止执行。
-
- 
-
-　　**assert <boolean表达式> : <错误信息表达式>**
-
-　　如果 <boolean表达式> 为 true，则程序继续执行。
-
 　　如果为 false，则程序抛出 java.lang.AssertionError，并输入<错误信息表达式>。
 
-```java
+```
 public static void main(String[] args) {
     System.out.println("123");
-
+    
     int a = 0;
     int b = 1;
     assert a == b; //需显示开启，默认为不开启状态 
@@ -43,11 +35,11 @@ public static void main(String[] args) {
     System.out.println("1234");
 }
 ```
-assert 的应用范围很多，主要包括：
-- 检查控制流
-- 检查输入参数是否有效
-- 检查函数结果是否有效
-- 检查程序不变
+- assert 的应用范围很多，主要包括：
+ - 检查控制流
+ - 检查输入参数是否有效
+ - 检查函数结果是否有效
+ - 检查程序不变
 
 ### 什么是断言
 
@@ -67,7 +59,6 @@ assert 的应用范围很多，主要包括：
 | void assertSame([String message], java.lang.Object expected, java.lang.Object actual) | 断言，两个对象引用相同的对象                                 |
 | void assertNotSame([String message], java.lang.Object unexpected, java.lang.Object actual) | 断言，两个对象不是引用同一个对象                             |
 | void assertArrayEquals([String message], expectedArray, resultArray) | 断言预期数组和结果数组相等。数组的类型可能是 int, long, short, char, byte or java.lang.Object. |
-
 ---
 ## boolean
 ## break
