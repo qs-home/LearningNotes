@@ -1,15 +1,15 @@
-关键字 |  |  |  |  
---- | --- | --- | --- | --- 
-abstract | assert | boolean | break | byte
-case | catch | char | class | const
-continue | default | do | double | else
-enum | extends | final | finally | float
-for |	goto | if | implements | import
-instanceof | int | interface | long	| native
-new	| package |	private |	protected |	public
-return | strictfp	 | short |	static |	super
-switch | synchronized |	this |	throw |	throws
-transient |	try |	void | volatile |	while
+| 关键字 |||||  
+| :---: | :---: | :---: | :---: | :---: | 
+| abstract | assert | boolean | break | byte |
+| case | catch | char | class | const |
+| continue | default | do | double | else |
+| enum | extends | final | finally | float |
+| for |	goto | if | implements | import |
+| instanceof | int | interface | long	| native |
+| new	| package |	private |	protected |	public |
+| return | strictfp	 | short |	static |	super |
+| switch | synchronized |	this |	throw |	throws |
+| transient |	try |	void | volatile |	while |
 
 ## abstract
 ## assert
