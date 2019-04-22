@@ -6,11 +6,13 @@
  主要内容：基本概念、面向对象、关键字、基本数据类型与运算、字符串与数组、异常处理、Object 通用方法
 
 # 基础
-- [static](#static)
+- [关键字](#关键字)
+	- [static](#static)
+- [代码块](#代码块)	
 - [Java程序初始化的顺序是怎么样的](#Java程序初始化的顺序是怎么样的)
 
 ---
-
+# 关键字
 ## static（静态）
 > ### static特点
 - 1. 静态能够修饰的是 成员变量 和 成员方法、
@@ -33,6 +35,58 @@ p.eat();
 > ### 什么时候把成员定义成static？
 - 成员变量：当所有对象的某个属性值都一样时，这个成员变量可以定义为静态的。
 - 成员方法：工具方法。
+---
+
+## 代码块
+> ### 局部代码块
+- 定义在方法中
+- 作用：限定变量的生命周期，没用。
+> ### 构造代码块
+- 定义在类中
+- 作用：创建对象的时候，构造代码块会自动在构造方法之前执行。
+- 如果有一些操作在创建每个对象之前都需要执行，把这些代码放在构造代码块中。
+> ### 静态代码块
+- 定义在类中
+- 作用：随着类的加载而执行，做注册驱动的需求时使用。
+> ### 代码块面试题
+- 加载顺序：静态块(父) -> 静态块(子) -> 定义初始化块(父) -> 构造函数(父) -> 定义初始化块(子) -> 构造函数(子)
+```
+public class BlockTest {
+	static {
+		System.out.println("BlockTest静态代码块执行");
+	}
+	
+	{
+		System.out.println("BlockTest构造代码块执行");
+	}
+
+	public BlockTest(){
+		System.out.println("BlockTest无参构造执行了");
+	}
+	
+	public static void main(String[] args) {
+		System.out.println("BlockTest的主函数执行了");
+		Coder c = new Coder();
+		Coder c2 = new Coder();
+	}
+}
+
+class Coder {
+	
+	static {
+		System.out.println("Coder静态代码块执行");
+	}
+	
+	{
+		System.out.println("Coder构造代码块执行");
+	}
+	
+	public Coder() {
+		System.out.println("Coder无参空构造执行");
+	}	
+	
+}
+```
 ---
 
 ## Java程序初始化的顺序是怎么样的
