@@ -3,7 +3,7 @@
 | [abstract抽象](#abstract抽象) | [assert断言](#assert断言) | boolean | [break](#break) | byte |
 | case | catch | char | class | const |
 | [continue](#continue) | default | do | double | else |
-| enum | [extends]（#extends） | [final](#final) | [finally](#finally) | float |
+| enum | [extends](#extends) | [final](#final) | [finally](#finally) | float |
 | for |	goto | if | implements | import |
 | instanceof | int | interface | long	| native |
 | new	| package |	private |	protected |	public |
