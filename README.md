@@ -28,7 +28,7 @@
 
 - [Java 基础](notes/Java/Java基础.md)
 
-  基本概念、面向对象、关键字、基本数据类型与运算、字符串与数组、异常处理、Object 通用方法
+  基本概念、面向对象、[关键字](notes/java/java关键字)、基本数据类型与运算、字符串与数组、异常处理、Object 通用方法
   
 - [Java 集合](notes/Java/Java集合.md)
 
