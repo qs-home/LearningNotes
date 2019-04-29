@@ -1,6 +1,5 @@
-| 关键字 |||||  
-| :---: | :---: | :---: | :---: | :---: | 
 | [abstract](#abstract) | [assert](#assert) | boolean | [break](#break) | byte |
+| :---: | :---: | :---: | :---: | :---: | 
 | case | catch | char | class | const |
 | [continue](#continue) | default | do | double | else |
 | enum | [extends](#extends) | [final](#final) | [finally](#finally) | float |
